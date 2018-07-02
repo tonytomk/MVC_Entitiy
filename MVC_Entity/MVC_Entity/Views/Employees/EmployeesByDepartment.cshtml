@@ -1,0 +1,30 @@
+﻿@model IEnumerable<MVC_Entity.Models.DepartmentTotals>
+
+@{
+    ViewBag.Title = "EmployeesByDepartment";
+}
+
+<h2>EmployeesByDepartment</h2>
+
+<table class="table">
+  
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>@Html.DisplayNameFor(model => model.Total)</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Total)
+            </td>
+        </tr>
+    }
+
+</table>
